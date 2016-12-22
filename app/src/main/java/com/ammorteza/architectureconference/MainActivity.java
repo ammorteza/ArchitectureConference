@@ -173,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.bonyadMaskanLogo) , "bonyad_maskan_logo.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.abMantagheLogo) , "ab_mantaghee_logo.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.bonyadIranShenasiLogo) , "bonyad_iranshenasi_logo.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.asnadLogo) , "asnad_ketabkhane_logo.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.rahVaShahrsaziLogo) , "_iran_logo.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.shoraLogo) , "shoraye_eslami_logo.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.shabake5Logo) , "shabake_5_logo.png");
                     break;
             }
 
