@@ -157,7 +157,7 @@
                             android:textSize="8sp"
                             android:gravity="center"
                             android:textStyle="bold"
-                            android:text="اشهر همدان"/>
+                            android:text="شهر همدان"/>
                     </LinearLayout>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>

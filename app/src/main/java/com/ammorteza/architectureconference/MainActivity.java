@@ -1,7 +1,6 @@
 package com.ammorteza.architectureconference;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.Nullable;
@@ -9,7 +8,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -24,15 +22,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.ViewFlipper;
-
-import com.cepheuen.progresspageindicator.ProgressPageIndicator;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -70,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId())
         {
             case R.id.conItem1:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "con_part1_4.jpg");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "con_part1_4.png");
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("معماری و شهرسازی مدرن");
                 ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر مترجم");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("ساخت و ساز، بنا کردن آبادی ها و راهکارهای شکل گیری آن از دیرباز مورد توجه انسان بوده است. ");
@@ -78,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("11111111", "111111111111111111");
                 break;
             case R.id.conItem2:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "con_part1_4.jpg");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "con_part1_4.png");
                 Log.d("222222222", "22222222222222");
                 break;
         }
@@ -146,19 +140,19 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_banner1) , "irancell_banner.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_banner2) , "irancell_banner1.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_banner3) , "irancell_banner2.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img1) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img2) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img3) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img4) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img5) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "con_part1_4.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img1) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img2) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img3) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img4) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img5) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_lunch_time) , "lunch_time.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img1) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img2) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img3) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img4) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img5) , "con_part1_4.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img6) , "con_part1_4.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img1) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img2) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img3) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img4) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img5) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img6) , "con_part1_4.png");
                     break;
                 case 2:
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.supportersMirasLogo) , "miras_logo.png");
@@ -177,6 +171,18 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.rahVaShahrsaziLogo) , "_iran_logo.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.shoraLogo) , "shoraye_eslami_logo.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.shabake5Logo) , "shabake_5_logo.png");
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.execAdmin) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec1) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec2) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec3) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec4) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec5) , "member.png");
                     break;
             }
 
@@ -233,6 +239,18 @@ public class MainActivity extends AppCompatActivity {
                     View viewSupporters = inflater.inflate(R.layout.fragment_supporters_fragment_layout, container, false);
                     loadImages(viewSupporters , tabPosition);
                     return viewSupporters;
+                case 3:
+                    View viewHistory = inflater.inflate(R.layout.fragment_history_fragment_layout, container, false);
+                    loadImages(viewHistory , tabPosition);
+                    return viewHistory;
+                case 4:
+                    View viewArticles = inflater.inflate(R.layout.fragment_articles_fragment_layout, container, false);
+                    loadImages(viewArticles , tabPosition);
+                    return viewArticles;
+                case 5:
+                    View viewMembers = inflater.inflate(R.layout.fragment_members_fragment_layout, container, false);
+                    loadImages(viewMembers , tabPosition);
+                    return viewMembers;
             }
             return null;
         }
