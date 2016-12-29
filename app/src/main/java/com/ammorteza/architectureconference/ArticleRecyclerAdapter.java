@@ -1,5 +1,6 @@
 package com.ammorteza.architectureconference;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,11 +15,11 @@ import java.util.HashMap;
  */
 public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private ArrayList<HashMap<String , Object>> mItemList;
-    private Context context;
+    private Activity activity;
 
-    public ArticleRecyclerAdapter(Context c, ArrayList<HashMap<String, Object>> itemList) {
+    public ArticleRecyclerAdapter(Activity c, ArrayList<HashMap<String, Object>> itemList) {
         mItemList = itemList;
-        context = c;
+        activity = c;
     }
 
     @Override
@@ -30,9 +31,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         ArticleRecyclerItemViewHolder holder = (ArticleRecyclerItemViewHolder) viewHolder;
-        holder.setSubject(mItemList.get(position).get("subject").toString());
-        holder.setOwner(mItemList.get(position).get("owner").toString());
-        holder.setCardViewListener();
+        holder.init(activity , mItemList.get(position));
     }
 
     @Override

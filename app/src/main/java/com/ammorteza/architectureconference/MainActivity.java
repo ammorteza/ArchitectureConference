@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("text" , articles.get(0).get("text").toString());
                     RecyclerView recyclerView = (RecyclerView) viewArticles.findViewById(R.id.recycler_view);
                     recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-                    ArticleRecyclerAdapter recyclerAdapter = new ArticleRecyclerAdapter(getContext(), articles);
+                    ArticleRecyclerAdapter recyclerAdapter = new ArticleRecyclerAdapter(getActivity(), articles);
                     recyclerView.setAdapter(recyclerAdapter);
                     loadImages(viewArticles , tabPosition);
                     return viewArticles;

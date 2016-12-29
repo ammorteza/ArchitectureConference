@@ -8,5 +8,6 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"/>
+        android:background="#f5f5f5"
+        android:padding="5dp"/>
 </LinearLayout>

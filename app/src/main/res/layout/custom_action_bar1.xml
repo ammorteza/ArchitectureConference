@@ -19,34 +19,22 @@
             android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
             android:textSize="14sp"
-            android:text="کنگره معماری و شهرسازی"
+            android:text="چکیده"
             android:textStyle="bold"/>
         <ImageView
-            android:id="@+id/ic_drawer"
+            android:id="@+id/ic_arrow_forward"
             android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
             android:gravity="center_vertical"
             android:adjustViewBounds="true"
-            android:padding="12dp"
-            android:paddingRight="15dp"
-            android:paddingLeft="15dp"
-            android:src="@drawable/ic_drawer" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/action_bar_left"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-        <ImageButton
-            android:id="@+id/popUpMenu"
-            android:layout_width="?attr/actionBarSize"
-            android:layout_height="?attr/actionBarSize"
-            android:gravity="center_vertical"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
+            android:padding="2dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="15dp"
             android:tint="@color/colorAccent"
-            android:src="@drawable/ic_more_vert"/>
+            android:src="@drawable/ic_arrow_forward" />
     </LinearLayout>
 </RelativeLayout>
