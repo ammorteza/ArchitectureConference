@@ -36,6 +36,7 @@ import com.cepheuen.progresspageindicator.ProgressPageIndicator;
 public class FirstActivity extends AppCompatActivity {
 
     //int[] imageArray = { R.drawable.first_pic1 , R.drawable.first_pic2 , R.drawable.first_pic3 , R.drawable.first_pic4};
+    DatabaseHandler db = new DatabaseHandler(FirstActivity.this);
     Handler handler = new Handler();
     Runnable runnable;
     @Override
@@ -43,6 +44,7 @@ public class FirstActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        int temp = db.getArticleCount();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

@@ -12,6 +12,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -27,6 +30,9 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -200,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             Bundle args = getArguments();
+            DatabaseHandler db = new DatabaseHandler(getContext());
             int tabPosition = args.getInt(TAB_POSITION);
             switch (tabPosition)
             {
@@ -245,6 +252,12 @@ public class MainActivity extends AppCompatActivity {
                     return viewHistory;
                 case 4:
                     View viewArticles = inflater.inflate(R.layout.fragment_articles_fragment_layout, container, false);
+                    ArrayList<HashMap<String , Object>> articles = db.getAllArticleContacts();
+                    Log.d("text" , articles.get(0).get("text").toString());
+                    RecyclerView recyclerView = (RecyclerView) viewArticles.findViewById(R.id.recycler_view);
+                    recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                    ArticleRecyclerAdapter recyclerAdapter = new ArticleRecyclerAdapter(getContext(), articles);
+                    recyclerView.setAdapter(recyclerAdapter);
                     loadImages(viewArticles , tabPosition);
                     return viewArticles;
                 case 5:
