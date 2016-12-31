@@ -73,6 +73,12 @@ public class ArticleActivity extends AppCompatActivity {
         parent.setContentInsetsAbsolute(0, 0);
     }
 
+    public void arrowForward(View view)
+    {
+        finish();
+        overridePendingTransition(R.anim.page_pull_in_left, R.anim.page_push_out_right);
+    }
+
     private void init()
     {
         ((TextView)findViewById(R.id.subject)).setText(itemValue.get("subject").toString());

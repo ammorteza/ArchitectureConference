@@ -62,7 +62,7 @@ public class FirstActivity extends AppCompatActivity {
                     Intent mainIntent = new Intent(FirstActivity.this, MainActivity.class);
                     startActivity(mainIntent);
                     finish();
-                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+                    overridePendingTransition(R.anim.page_pull_in_right, R.anim.page_push_out_left);
                 }
             }
         }, 5000);

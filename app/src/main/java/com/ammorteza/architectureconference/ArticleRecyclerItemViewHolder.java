@@ -53,6 +53,7 @@ public class ArticleRecyclerItemViewHolder extends RecyclerView.ViewHolder{
                     Intent articleInfo = new Intent(activity, ArticleActivity.class);
                     articleInfo.putExtra("itemValue" , itemValue);
                     activity.startActivity(articleInfo);
+                    activity.overridePendingTransition(R.anim.page_pull_in_right, R.anim.page_push_out_left);
                 }
             }
         });
