@@ -51,6 +51,12 @@ public class ArticleActivity extends AppCompatActivity {
         this.init();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        overridePendingTransition(R.anim.page_pull_in_left, R.anim.page_push_out_right);
+    }
 
     private void createActionBar()
     {

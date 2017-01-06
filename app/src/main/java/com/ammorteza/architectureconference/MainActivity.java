@@ -89,6 +89,44 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void memItems(View view)
+    {
+        final Dialog dialog = new Dialog(MainActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
+        dialog.setContentView(R.layout.mem_item_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        Window window = dialog.getWindow();
+        lp.copyFrom(window.getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        window.setAttributes(lp);
+        switch (view.getId())
+        {
+            case R.id.execAdmin:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "malmir.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس علی مالمیر");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("رئیس کنگره");
+                break;
+            case R.id.exec2:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "farahpoor.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس محمد امین فرهپور");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیر اجرایی کنگره");
+                break;
+            case R.id.exec5:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "tootoonchi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس بهرام توتونچی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیر کنگره");
+                break;
+        }
+        //TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        //text.setText(msg);
+
+        dialog.show();
+
+    }
+
     private void createPopUpMenu()
     {
         findViewById(R.id.popUpMenu).setOnClickListener(new View.OnClickListener() {
@@ -183,12 +221,12 @@ public class MainActivity extends AppCompatActivity {
                 case 4:
                     break;
                 case 5:
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.execAdmin) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec1) , "member.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec2) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.execAdmin) , "malmir.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec1) , "amzajerdi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec2) , "farahpoor.jpg");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec3) , "member.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec4) , "member.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec5) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec5) , "tootoonchi.jpg");
                     break;
             }
 
