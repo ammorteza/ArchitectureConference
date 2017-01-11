@@ -52,7 +52,7 @@ public class FirstActivity extends AppCompatActivity {
                     initWizardDialog();
                     loadImages();
                     backImage();
-                    LinearLayout first_logo = (LinearLayout) findViewById(R.id.first_logo);
+                    RelativeLayout first_logo = (RelativeLayout) findViewById(R.id.first_logo);
                     RelativeLayout first_review = (RelativeLayout) findViewById(R.id.first_review);
                     first_logo.setVisibility(LinearLayout.GONE);
                     first_review.setVisibility(RelativeLayout.VISIBLE);
@@ -187,7 +187,7 @@ public class FirstActivity extends AppCompatActivity {
                     Intent mainIntent = new Intent(FirstActivity.this, MainActivity.class);
                     startActivity(mainIntent);
                     finish();
-                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+                    overridePendingTransition(R.anim.page_pull_in_right, R.anim.page_push_out_left);
                 }
             });
             if (position == 7) {

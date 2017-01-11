@@ -1,6 +1,7 @@
 package com.ammorteza.architectureconference;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.Nullable;
@@ -109,12 +110,52 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس علی مالمیر");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("رئیس کنگره");
                 break;
+            case R.id.exec1:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "safari.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("اتابک صفری تورج");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیرخانه کنگره");
+                break;
             case R.id.exec2:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "farahpoor.jpg");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس محمد امین فرهپور");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیر اجرایی کنگره");
                 break;
+            case R.id.exec3:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "moosavi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مریم مختاری موسوی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("مدیر سایت - مسئول دبیرخانه");
+                break;
+            case R.id.exec4:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "toosee.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("سید کمال الدین طوسی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("مسئول پشتیبانی کنگره");
+                break;
             case R.id.exec5:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "tootoonchi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس بهرام توتونچی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیر کنگره");
+                break;
+            case R.id.exec6:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "amzajerdi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مرتضی امزاجردی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("عضو دبیرخانه کنگره");
+                break;
+            case R.id.exec7:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "kalafchi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("زهرا کلافچی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("طراحی و تبلیغات");
+                break;
+            case R.id.exec8:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "moosavi.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مریم مختاری موسوی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("مدیر سایت - مسئول دبیرخانه");
+                break;
+            case R.id.exec9:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "toosee.jpg");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("سید کمال الدین طوسی");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("مسئول پشتیبانی کنگره");
+                break;
+            case R.id.exec10:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this , (ImageView)dialog.findViewById(R.id.con_dialog_img) , "tootoonchi.jpg");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("مهندس بهرام توتونچی");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("دبیر کنگره");
@@ -136,7 +177,15 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        return false;
+                        switch (item.getItemId())
+                        {
+                            case  R.id.item_about:
+                                Intent abountPage = new Intent(MainActivity.this, AboutActivity.class);
+                                startActivity(abountPage);
+                                overridePendingTransition(R.anim.page_pull_in_right, R.anim.page_push_out_left);
+                                break;
+                        }
+                        return true;
                     }
                 });
                 popupMenu.inflate(R.menu.popup_menu);
@@ -222,11 +271,17 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 5:
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.execAdmin) , "malmir.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec1) , "amzajerdi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec1) , "safari.jpg");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec2) , "farahpoor.jpg");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec3) , "member.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec4) , "member.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec3) , "moosavi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec4) , "toosee.jpg");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec5) , "tootoonchi.jpg");
+
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec6) , "amzajerdi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec7) , "kalafchi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec8) , "moosavi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec9) , "toosee.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.exec10) , "tootoonchi.jpg");
                     break;
             }
 
@@ -246,6 +301,15 @@ public class MainActivity extends AppCompatActivity {
             Bundle args = getArguments();
             DatabaseHandler db = new DatabaseHandler(getContext());
             int tabPosition = args.getInt(TAB_POSITION);
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+            int screenHeight = displaymetrics.heightPixels;
+
+            int actionBarHeight = 0;
+            TypedValue tv = new TypedValue();
+            if (getActivity().getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+                actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+            }
             switch (tabPosition)
             {
                 case 0:
@@ -264,15 +328,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                     loadImages(view , tabPosition);
-                    DisplayMetrics displaymetrics = new DisplayMetrics();
-                    getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-                    int screenHeight = displaymetrics.heightPixels;
-
-                    int actionBarHeight = 0;
-                    TypedValue tv = new TypedValue();
-                    if (getActivity().getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-                        actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
-                    }
 
                     ((LinearLayout)view.findViewById(R.id.con_main_layout)).setMinimumHeight(screenHeight - actionBarHeight);
 
@@ -301,6 +356,7 @@ public class MainActivity extends AppCompatActivity {
                 case 5:
                     View viewMembers = inflater.inflate(R.layout.fragment_members_fragment_layout, container, false);
                     loadImages(viewMembers , tabPosition);
+                    ((LinearLayout)viewMembers.findViewById(R.id.member_main_layout)).setMinimumHeight(screenHeight - actionBarHeight);
                     return viewMembers;
             }
             return null;

@@ -69,11 +69,15 @@
             android:gravity="right"
             android:textColor="@android:color/black"
             android:textStyle="bold"
+            android:textSize="14sp"
             android:text="اعضای اجرایی"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp">
             <com.ammorteza.architectureconference.ResizableLinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -128,6 +132,74 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/exec5"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp">
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/exec6"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/exec7"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/exec8"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/exec9"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/exec10"
                     android:layout_width="match_parent"
                     android:adjustViewBounds="true"
                     android:layout_height="match_parent"
