@@ -15,5 +15,6 @@
         android:padding="10dp"
         android:background="#f5f5f5">
         <include layout="@layout/member_exec_layout"></include>
+        <include layout="@layout/member_academic_layout"></include>
     </LinearLayout>
 </app:android.support.v4.widget.NestedScrollView>
