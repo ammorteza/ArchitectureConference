@@ -46,6 +46,8 @@
                     android:textStyle="bold"
                     android:layout_gravity="right"
                     android:textColor="@android:color/tab_indicator_text"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:text="هیئت علمی دانشگاه بوعلی سینا همدان و دبیر علمی کنگره"/>
             </LinearLayout>
             <android.support.v7.widget.CardView
@@ -148,7 +150,7 @@
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="0dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="0dp">
             <com.ammorteza.architectureconference.ResizableLinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -203,6 +205,74 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/academic10"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp">
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/academic11"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/academic12"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/academic13"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/academic14"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:onClick="memItems"
+                    android:padding="2dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/academic15"
                     android:layout_width="match_parent"
                     android:adjustViewBounds="true"
                     android:layout_height="match_parent"

@@ -43,7 +43,9 @@
                     android:textStyle="bold"
                     android:layout_gravity="right"
                     android:textColor="@android:color/tab_indicator_text"
-                    android:text="رئیس کنگره"/>
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="مدیرکل میراث فرهنگی, صنایع دستی و گردشگری استان همدان و رئیس کنگره"/>
             </LinearLayout>
             <android.support.v7.widget.CardView
                 android:layout_width="40dp"

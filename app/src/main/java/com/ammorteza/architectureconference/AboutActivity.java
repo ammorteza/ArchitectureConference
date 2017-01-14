@@ -23,8 +23,8 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        this.createActionBar();
+        setContentView(R.layout.activity_about_);
+        //this.createActionBar();
     }
 
     @Override
