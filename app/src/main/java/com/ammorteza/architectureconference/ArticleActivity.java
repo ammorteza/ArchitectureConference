@@ -90,5 +90,6 @@ public class ArticleActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.subject)).setText(itemValue.get("subject").toString());
         ((TextView)findViewById(R.id.owner)).setText(itemValue.get("owner").toString());
         ((TextView)findViewById(R.id.text)).setText(itemValue.get("text").toString());
+        ((TextView)findViewById(R.id.axe)).setText(itemValue.get("axe").toString());
     }
 }

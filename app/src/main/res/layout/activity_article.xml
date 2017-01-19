@@ -82,11 +82,22 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
+                            android:paddingBottom="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/axe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
                             android:paddingBottom="50dp"
                             android:layout_alignParentBottom="true"
                             android:gravity="center"
                             android:textColor="@android:color/secondary_text_light"
-                            android:textSize="12sp" />
+                            android:textSize="9sp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView

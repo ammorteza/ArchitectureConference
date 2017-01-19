@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.academic20:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "bahramzade.jpg");
                 ((TextView)dialog.findViewById(R.id.mem_dialog_name)).setText("دکتر محمد بهرام زاده");
-                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("رئیس بنیاد ایران شناسی کشور");
+                ((TextView)dialog.findViewById(R.id.mem_dialog_post)).setText("معاون بنیاد ایرانشناسی  کشور");
                 break;
 
         }

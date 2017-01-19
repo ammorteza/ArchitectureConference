@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:animateFirstView="true"
             android:autoStart="true"
-            android:flipInterval="2000"
+            android:flipInterval="4000"
             android:inAnimation="@anim/pull_in_left"
             android:minHeight="100dp"
             android:outAnimation="@anim/push_out_right">
@@ -28,18 +28,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:src="@drawable/holder"
                 android:scaleType="centerCrop" />
             <ImageView
                 android:id="@+id/con_banner2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:src="@drawable/holder"
                 android:scaleType="centerCrop" />
             <ImageView
                 android:id="@+id/con_banner3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:src="@drawable/holder"
                 android:scaleType="centerCrop" />
         </com.ammorteza.architectureconference.NotifiableViewFlipper>
         <RadioGroup
