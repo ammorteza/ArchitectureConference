@@ -14,6 +14,132 @@
         android:orientation="vertical"
         android:padding="10dp"
         android:background="#f5f5f5">
-
+        <android.support.v7.widget.CardView
+            android:id="@+id/h1CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="4dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="right"
+                android:text="كنگره های استانی چهارمین کنگره تاریخ معماری و شهرسازی ایران از سوی 31 اداره کل میراث فرهنگی، صنایع دستی و گردشگری از شهریور تا بهمن ماه سالجاری طی یک دوره 5 ماهه برگزار می شود."
+                android:textSize="13sp" />
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="13sp"
+            android:gravity="right"
+            android:text="دکتر باقر آیت ا... زاده شیرازی"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="0dp">
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/history1"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/history2"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/history3"
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="4dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="right"
+                android:text="کنگره‌ی تاریخ معماری و شهرسازی ایران که سه دوره به همت مرحوم دکتر باقر آیت‌الله زاده شیرازی از سوی سازمان میراث فرهنگی، صنایع‌دستی و گردشگری کشور در ارگ بم برگزار شد از رویدادهای ارزشمند فرهنگی کشورمان بعد از انقلاب اسلامی  است که به دلیل محتوای علمی، هنری، فرهنگی و ... در نوع خود کم‌نظیر بوده است."
+                android:textSize="13sp" />
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="0dp">
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_drawer"
+                    android:padding="4dp"/>
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+            <com.ammorteza.architectureconference.ResizableLinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </com.ammorteza.architectureconference.ResizableLinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="چهارمین دوره برگزاری این کنگره پس از یک دهه تعویق، در سالجاری با نگاهی متفاوت برگزار خواهد شد"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="4dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="right"
+                android:text="برای اولین بار در برگزاری چهارمین کنگره تاریخ معماری و شهرسازی ایران تصمیم گرفته شد تمام استان‌های کشور به‌ صورت ادواری کنگره تاریخ معماری و شهرسازی خودشان را برگزار کنند تا این رویکرد در استان‌ها به جریانی تبدیل شود که به ارتقاء حفاظت از میراث فرهنگی به‌صورت مداوم و پایدار کمک کند.
+سه دوره کنگره تاریخ معماری و شهرسازی ایران که در سال‌های گذشته برگزار شد فتح بابی برای شناخت موضوع تاریخ معماری و شهرسازی ایران بود. چهارمین دوره این کنگره  پشتیبان و حمایت‌کننده جریانی است که بعد از برگزاری سه دوره کنگره اتفاق افتاده است؛ از این ‌رو در این دوره، کنگره تاریخ معماری و شهرسازی ایران درکنار طرح مباحث علمی و فرهنگی، فرصتی برای جریان سازی در حوزه حفاظت و ایجاد طنین توجه به حفاظت از آثار تاریخی و میراث فرهنگی در کشور را فراهم خواهد ساخت.
+ کنگره‌های استانی برای نخستین بار با توجه به ظرفیت‌های تاریخی، فرهنگی و با تاکید بر تاریخ معماری و شهرسازی هر استان برگزار می شود 
+امید است با برگزاری این رویداد ارزشمند در استان‌ها شاهد توجه بیشتر سازمان‌های دیگر به میراث فرهنگی باشیم و بتوانیم آشنایی بهتر و بیشتر استان ها با ظرفیت‌ها، قابلیت‌های تاریخی و فرهنگی نهفته در شهرها و دیگر سکونتگاه های زیستی مانند روستاهایشان را فراهم کنیم."
+                android:textSize="13sp" />
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 </app:android.support.v4.widget.NestedScrollView>
