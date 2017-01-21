@@ -30,7 +30,7 @@
                 android:src="@drawable/ic_arrow_forward"/>
         </LinearLayout>
     </RelativeLayout>
-    <android.support.v7.widget.CardView
+<!--    <android.support.v7.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="80dp"
@@ -44,5 +44,65 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:src="@drawable/amzajerdi"/>
-    </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/about_"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="350dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="@android:color/secondary_text_light"
+            android:text="اداره کل میراث فرهنگی, صنایع دستی و گردشگری استان همدان"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="@android:color/secondary_text_light"
+            android:text="با همکاری مرتضی امزاجردی"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/amzajerdi"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/miras_logo"
+            android:tint="@android:color/black"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_drawer"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/civilica"/>
+    </LinearLayout>
 </RelativeLayout>

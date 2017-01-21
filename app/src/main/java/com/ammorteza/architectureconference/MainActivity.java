@@ -105,6 +105,48 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
                 ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۳۰");
                 break;
+            case R.id.conItem6:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("سخنرانی ۳");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۱:۳۰");
+                break;
+            case R.id.conItem7:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مسخنرانی ۲");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۱:۰۰");
+                break;
+            case R.id.conItem8:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("سخنرانی ۱");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۰:۳۰");
+                break;
+            case R.id.conItem9:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله سوم");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۵:۲۰");
+                break;
+            case R.id.conItem10:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله دوم");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۵:۰۰");
+                break;
+            case R.id.conItem11:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله اول");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۴:۴۰");
+                break;
         }
         //TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
         //text.setText(msg);
@@ -377,7 +419,13 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img3) , "dr_motarjem.jpg");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img4) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img5) , "con_part1_4.png");
-                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img7) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img8) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img9) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img10) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img11) , "con_part1_4.png");
+
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_lunch_time) , "lunch_time.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img1) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img2) , "con_part1_4.png");
@@ -385,6 +433,7 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img4) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img5) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img6) , "con_part1_4.png");
+
                     break;
                 case 2:
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.supportersMirasLogo) , "miras_logo.png");
