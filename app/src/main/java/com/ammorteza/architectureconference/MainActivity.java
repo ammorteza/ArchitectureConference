@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -31,6 +32,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,6 +42,8 @@ import java.util.HashMap;
  * status bar and navigation/system bar) with user interaction.
  */
 public class MainActivity extends AppCompatActivity {
+    private Toast endToast;
+    private boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -47,12 +51,40 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.createActionBar();
         this.createPopUpMenu();
+        this.endToast = new Toast(MainActivity.this);
 
         DesignDemoPagerAdapter adapter = new DesignDemoPagerAdapter(getSupportFragmentManager());
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            endToast.cancel();
+            finish();
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        endToast.setDuration(Toast.LENGTH_SHORT);
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,null);
+        TextView textView=(TextView)layout.findViewById(R.id.toastText);
+        textView.setText("لطفا برای خروج دو بار لمس کنید");
+        endToast.setDuration(Toast.LENGTH_SHORT);
+        endToast.setView(layout);
+        endToast.show();
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
     }
 
     public void conItems(View view)
@@ -75,77 +107,84 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
                 ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مهندس علی مالمیر مدیرکل میراث فرهنگی, صنایع دستی و گردشگری استان همدان");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۰۰");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۸:۵۰");
                 break;
             case R.id.conItem2:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "hajmohamadi.jpg");
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
                 ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("حضرت آیت الله غیاث الدین طه محمدی, امام جمعه و نماینده ولی وفقیه در استان همدان");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۱۰");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۰۰");
                 break;
             case R.id.conItem3:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "dr_motarjem.jpg");
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
                 ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر عباس مترجم, هیئت علمی دانشگاه بوعلی سینا و دبیر علمی کنگره");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۰:۰۰");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۵۰");
                 break;
             case R.id.conItem4:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقامات همدان");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مسئولین محترم شهر همدان");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۴۵");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۳۰");
                 break;
             case R.id.conItem5:
                 LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
                 ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقامات تهران");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("نماینده سازمان میراث فرهنگی, صنایع دستی و گردشگری");
                 ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۳۰");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۰۹:۴۰");
                 break;
             case R.id.conItem6:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("سخنرانی ۳");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "makarchian.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی تخصصی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر مسعود مکارچیان");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("پل های قوسی تاریخی استان همدان");
                 ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۱:۳۰");
                 break;
             case R.id.conItem7:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مسخنرانی ۲");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "bahramzade.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی تخصصی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر محمد بهرام زاده");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("نقش باستان شناسي در مطالعات ايران شناسي");
                 ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۱:۰۰");
                 break;
             case R.id.conItem8:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("سخنرانی ۱");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "mojabi.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی تخصصی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر علی اضغر مرادی و مهندس سید مهدی مجابی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText(" راهبرد، توصيه، منشور و ضوابط مربوط به حفاظت و احياي بافت هاي تاريخي كشور");
                 ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۰:۳۰");
                 break;
             case R.id.conItem9:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله سوم");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۵:۲۰");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "mohamadian.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("ارائه مقاله منتخب");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر صاحب محمدیان منصور");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("بررسی قابلیتهای هندسی و سازه ای پتکانه");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۵:۱۰");
                 break;
             case R.id.conItem10:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله دوم");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۵:۰۰");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "nazariarshad.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("ارائه مقاله منتخب");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر رضا نظری ارشد");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("بررسي ومطالعه باستان شناختي آرامگاه برجي باباحسين ملاي");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۴:۵۰");
                 break;
             case R.id.conItem11:
-                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "con_part1_4.png");
-                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی");
-                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مقاله اول");
-                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("");
-                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۴:۴۰");
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "parsi.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("سخنرانی تخصصی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("مهندس فرامرز پارسی");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("بحران آسيب بناهاي تاريخي");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۰:۳۰");
+                break;
+            case R.id.conItem12:
+                LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(MainActivity.this, (ImageView) dialog.findViewById(R.id.con_dialog_img), "sajjadzade.jpg");
+                ((TextView)dialog.findViewById(R.id.con_dialog_subject)).setText("ارائه مقاله منتخب");
+                ((TextView)dialog.findViewById(R.id.con_dialog_name)).setText("دکتر حسن سجاد زاده");
+                ((TextView)dialog.findViewById(R.id.con_dialog_desc)).setText("عوامل موثر بر تحولات ساختاري با تاكيد بر دروازه ها و راه ها");
+                ((TextView)dialog.findViewById(R.id.con_dialog_time)).setText("۱۱:۰۰");
                 break;
         }
         //TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
@@ -419,20 +458,34 @@ public class MainActivity extends AppCompatActivity {
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img3) , "dr_motarjem.jpg");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img4) , "con_part1_4.png");
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img5) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img7) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img8) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img9) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img10) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img11) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img6) , "makarchian.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img7) , "bahramzade.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img8) , "mojabi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img9) , "mohamadian.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img10) , "nazariarshad.jpg");
+                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part1_img11) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_first_adib) , "adib.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p1ـ1) , "sajjadzade.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p1_2) , "naghdi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p1_3) , "abasi_nader_poor.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p2_1) , "mohamadifar.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p2_2) , "tajbakhsh.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p2_3) , "malekzade.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p2_4) , "shabani.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p2_5) , "hemati.jpg");
+
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p3_1) , "ezadi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p3_2) , "jalilmosavi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p3_3) , "madadi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.p3_4) , "mohamadian.jpg");
 
                     LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_lunch_time) , "lunch_time.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img1) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img2) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img3) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img4) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img5) , "con_part1_4.png");
-                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img6) , "con_part1_4.png");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img1) , "parsi.jpg");
+                    LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img2) , "sajjadzade.jpg");
+                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img3) , "con_part1_4.png");
+                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img4) , "con_part1_4.png");
+                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img5) , "con_part1_4.png");
+                    //LoadBigImage.createResizedImageViewWithoutPlaceHolderFromAssets(getContext() , (ImageView)view.findViewById(R.id.con_part2_img6) , "con_part1_4.png");
 
                     break;
                 case 2:

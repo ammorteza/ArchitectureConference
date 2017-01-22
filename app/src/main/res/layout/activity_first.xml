@@ -88,11 +88,44 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="120dp"
             app:dotGap="4dp"
             app:strokeRadius="5dp"
             app:strokeColor="#44FFFFFF"
             app:fillColor="@color/colorPrimary"
             app:radius="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#55FFFFFF"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true">
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@+id/arrow_left"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_keyboard_arrow_left"
+                android:tint="#88FFFFFF"
+                android:scaleType="center"
+                android:padding="4dp"
+                android:adjustViewBounds="true"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                android:tint="#88FFFFFF"
+                android:scaleType="center"
+                android:padding="4dp"
+                android:adjustViewBounds="true" />
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

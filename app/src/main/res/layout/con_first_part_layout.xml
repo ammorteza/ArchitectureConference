@@ -150,8 +150,7 @@
             card_view:cardElevation="0dp"
             card_view:cardCornerRadius="4dp"
             card_view:cardPreventCornerOverlap="false"
-            card_view:cardBackgroundColor="#DA522C"
-            android:onClick="conItems">
+            card_view:cardBackgroundColor="#DA522C">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -194,7 +193,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:textColor="@android:color/white"
-                        android:text="۰۸:۳۰"/>
+                        android:text="۰۸:۲۰"/>
                 </RelativeLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -244,6 +243,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
                         android:text="حضرت آیت الله غیاث الدین طه محمدی"/>
                 </LinearLayout>
@@ -288,6 +289,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
                         android:text="مهندس علی مالمیر"/>
                 </LinearLayout>
@@ -339,6 +342,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
                         android:text="دکتر عباس مترجم"/>
                 </LinearLayout>
@@ -383,8 +388,10 @@
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="مقامات همدان"/>
+                        android:text="نماینده سازمان میراث فرهنگی, صنایع دستی و گردشگری"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -427,8 +434,10 @@
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="مقامات تهران"/>
+                        android:text="مسئولین محترم شهر همدان"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -542,14 +551,16 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
+                        android:text="سخنرانی تخصصی"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="سخنرانی ۳"/>
+                        android:text="دکتر مسعود مکارچیان"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -586,14 +597,16 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
+                        android:text="سخنرانی تخصصی"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="سخنرانی ۲"/>
+                        android:text="دکتر محمد بهرام زاده"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -630,14 +643,16 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
+                        android:text="سخنرانی تخصصی"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="سخنرانی ۱"/>
+                        android:text="دکتر سید مهدی مجابی و دکتر علی اصغر مرادی"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -682,19 +697,35 @@
                         android:src="@drawable/chef"/>
                 </android.support.v7.widget.CardView>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginRight="60dp"
                     android:gravity="right">
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="right"
-                        android:textColor="@android:color/black"
-                        android:text="بفرمایید نهار"/>
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="بفرمایید نهار"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/tab_indicator_text"
+                            android:text="۱۲:۰۰"/>
+                    </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -711,8 +742,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="2dp"
         android:layout_marginRight="8dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardBackgroundColor="#2A81EF">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <ImageView
+                        android:id="@+id/con_first_adib"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentRight="true" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="45dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/white"
+                            android:text="دکتر مرتضی ادیب"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/white"
+                            android:text="معماري منظر و ايجاد زيرساخت­هاي سبز در محيط شهري"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@android:color/white"
+                        android:text="۱۴:۰۰"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -762,62 +853,6 @@
                 </LinearLayout>
             </com.ammorteza.architectureconference.Square2in2LinearLayout>
         </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="match_parent"
-            android:layout_margin="2dp"
-            card_view:cardElevation="0dp"
-            card_view:cardCornerRadius="4dp"
-            card_view:cardPreventCornerOverlap="false"
-            card_view:cardBackgroundColor="#DA522C"
-            android:onClick="conItems">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="0dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="12dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:layout_gravity="right"
-                            android:textColor="@android:color/white"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:text="پنل باستان شناسی"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:layout_gravity="right"
-                            android:textColor="@android:color/white"
-                            android:text="......................."/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:layout_gravity="left"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@android:color/white"
-                        android:text="۱۴:۰۰"/>
-                </RelativeLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
     </LinearLayout>
     <!--##########################################-->
     <LinearLayout
@@ -858,14 +893,16 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
+                        android:text="ارائه مقاله منتخب"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
                         android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="مقاله سوم"/>
+                        android:text="دکتر صاحب محمدیان منصور"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -902,60 +939,249 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
+                        android:text="ارائه مقاله منتخب"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="8sp"
-                        android:layout_gravity="right"
-                        android:textColor="@android:color/tab_indicator_text"
-                        android:text="مقاله دوم"/>
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:id="@+id/conItem11"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            card_view:cardElevation="0dp"
-            card_view:cardCornerRadius="4dp"
-            card_view:cardPreventCornerOverlap="false"
-            card_view:cardBackgroundColor="@android:color/white"
-            android:onClick="conItems">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="0dp">
-                <ImageView
-                    android:id="@+id/con_part1_img11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="5dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="10sp"
                         android:layout_gravity="right"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:textColor="@android:color/black"
-                        android:text="سخنرانی"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="8sp"
-                        android:layout_gravity="right"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="مقاله اول"/>
+                        android:text="دکتر رضا نظری ارشد"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
+    <!--/////////////////////////////////////////////-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="پنل شهرسازی"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:text="۱۵:۴۵"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="right"
+                        android:textColor="@android:color/tertiary_text_light"
+                        android:text="بازآفرینی محلات و مرکز محلات سنتی شهر همدان"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="right"
+                        android:textColor="@android:color/tertiary_text_light"
+                        android:text="مکان: سالن اصلی"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p1ـ1"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p1_2"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p1_3"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <!--/////////////////////////////////////////////-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="پنل باستان شناسی"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@android:color/tertiary_text_light"
+                            android:text="۱۵:۴۵"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="right"
+                        android:textColor="@android:color/tertiary_text_light"
+                        android:text="مکان: آتلیه (همزمان با پنل شهرسازی)"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p2_1"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p2_2"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p2_3"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p2_4"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+                <com.ammorteza.architectureconference.ResizableLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/p2_5"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"/>
+                </com.ammorteza.architectureconference.ResizableLinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

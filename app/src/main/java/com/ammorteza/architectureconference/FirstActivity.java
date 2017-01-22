@@ -117,6 +117,8 @@ public class FirstActivity extends AppCompatActivity {
     private void initWizardDialog()
     {
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ImageView arrow_left = (ImageView)findViewById(R.id.arrow_left);
+        final ImageView arrow_right = (ImageView)findViewById(R.id.arrow_right);
         CustomPagerAdapter customPagerAddapter = new CustomPagerAdapter(this);
         viewPager.setAdapter(customPagerAddapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -154,7 +156,15 @@ public class FirstActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-
+                if (position == 0)
+                    arrow_left.setVisibility(ImageView.GONE);
+                else if (position == 7)
+                    arrow_right.setVisibility(ImageView.GONE);
+                else
+                {
+                    arrow_left.setVisibility(ImageView.VISIBLE);
+                    arrow_right.setVisibility(ImageView.VISIBLE);
+                }
             }
 
             @Override
@@ -164,6 +174,19 @@ public class FirstActivity extends AppCompatActivity {
         });
         ProgressPageIndicator pagerIndicator = (ProgressPageIndicator)findViewById(R.id.pageIndicator);
         pagerIndicator.setViewPager(viewPager);
+        arrow_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+            }
+        });
+
+        arrow_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+            }
+        });
     }
 
     private class CustomPagerAdapter extends PagerAdapter {
@@ -190,6 +213,8 @@ public class FirstActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.page_pull_in_right, R.anim.page_push_out_left);
                 }
             });
+
+
             if (position == 7) {
                 condac.setVisibility(Button.VISIBLE);
             } else {
