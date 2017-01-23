@@ -85,7 +85,7 @@
         android:layout_marginRight="10dp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:text="روز نخست"/>
+        android:text="روز نخست - ۱۳۹۵/۱۱/۶"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
                         android:layout_gravity="left"
                         android:layout_alignParentLeft="true"
                         android:textColor="@android:color/white"
-                        android:text="۰۸:۵۰"/>
+                        android:text="۰۸:۴۰"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -772,7 +772,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:textColor="@android:color/black"
-                            android:text="بفرمایید نهار"/>
+                            android:text="نماز و نهار"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -790,7 +790,7 @@
                         android:textSize="13sp"
                         android:layout_gravity="right"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="پذیرایی از میهمانان گرامی در سلف دانشکده معماری"/>
+                        android:text="پذیرایی از میهمانان گرامی در سلف دانشکده هنر و معماری دانشگاه بوعلی سینا همدان"/>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
@@ -1177,6 +1177,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:layout_gravity="right"
+                        android:textStyle="bold"
                         android:textColor="@android:color/tertiary_text_light"
                         android:text="مکان: آتلیه (همزمان با پنل شهرسازی)"/>
                 </LinearLayout>

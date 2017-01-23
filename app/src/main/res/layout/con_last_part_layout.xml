@@ -17,7 +17,7 @@
         android:layout_marginRight="10dp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:text="روز دوم"/>
+        android:text="روز پایانی - ۱۳۹۵/۱۱/۷"/>
     <!--/////////////////////////////////////////////-->
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -214,7 +214,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp">
         <android.support.v7.widget.CardView
             android:id="@+id/conItem12"
@@ -302,6 +301,76 @@
                         android:textColor="@android:color/tab_indicator_text"
                         android:text="مهندس فرامرز پارسی"/>
                 </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="75dp"
+                        android:paddingBottom="30dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/black"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="اختتامیه کنگره"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:text="تقدیر از مقالات برتر و قرائت بیانیه چهارمین کنگره تاریخ معماری و شهرسازی ایران - همدان."/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:text="۱۱:۲۰"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/finish"/>
+                </RelativeLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>

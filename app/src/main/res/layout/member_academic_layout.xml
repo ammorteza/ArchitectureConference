@@ -217,8 +217,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
-            android:paddingTop="0dp"
-            android:paddingBottom="10dp">
+            android:paddingTop="0dp">
             <com.ammorteza.architectureconference.ResizableLinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -285,8 +284,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
-            android:paddingTop="0dp"
-            android:paddingBottom="10dp">
+            android:paddingTop="0dp">
             <com.ammorteza.architectureconference.ResizableLinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
