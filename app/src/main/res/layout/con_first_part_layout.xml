@@ -94,6 +94,76 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp">
         <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            card_view:cardElevation="0dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="55dp"
+                        android:paddingBottom="30dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/black"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="تلاوت آیاتی از قرآن مجید"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:text="آغاز همایش با قرائت آیاتی از کلام الله مجیدتوسط استاد حسین خورشیدی"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:text="۰۸:۲۰"/>
+                    <ImageView
+                        android:id="@+id/con_first_khorshidi"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <!--//////////////////////////////////-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -159,41 +229,29 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
+                    android:layout_margin="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_alignParentTop="true"
-                        android:layout_marginTop="12dp">
+                        android:layout_marginTop="14dp">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:layout_gravity="right"
                             android:textColor="@android:color/white"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:text="تلاوت آیاتی از قرآن مجید"/>
+                            android:text="سرود ملی جمهوری اسلامی ایران"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:layout_gravity="right"
                             android:textColor="@android:color/white"
-                            android:text="آغاز همایش با قرائت آیاتی از کلام الله مجیدتوسط استاد حسین خورشیدی"/>
+                            android:text="ای همیشه نیلگون, ای خلیج پارس, نام نامیت همواره جاودانه است"/>
                     </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:layout_gravity="left"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
-                        android:textColor="@android:color/white"
-                        android:text="۰۸:۲۰"/>
                 </RelativeLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -652,7 +710,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="@android:color/tab_indicator_text"
-                        android:text="دکتر سید مهدی مجابی و دکتر علی اصغر مرادی"/>
+                        android:text="دکتر علی اصغر مرادی و دکتر سید مهدی مجابی"/>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -957,10 +1015,13 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        card_view:cardElevation="0dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardPreventCornerOverlap="false"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginRight="10dp"
-        card_view:cardCornerRadius="4dp">
+        card_view:cardBackgroundColor="@android:color/white">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -999,15 +1060,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
+                        android:textSize="12sp"
                         android:layout_gravity="right"
                         android:textColor="@android:color/tertiary_text_light"
                         android:text="بازآفرینی محلات و مرکز محلات سنتی شهر همدان"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_gravity="right"
                         android:textColor="@android:color/tertiary_text_light"
@@ -1070,10 +1130,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        card_view:cardCornerRadius="4dp">
+        card_view:cardElevation="0dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardBackgroundColor="@android:color/white">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1112,8 +1175,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
+                        android:textSize="14sp"
                         android:layout_gravity="right"
                         android:textColor="@android:color/tertiary_text_light"
                         android:text="مکان: آتلیه (همزمان با پنل شهرسازی)"/>
